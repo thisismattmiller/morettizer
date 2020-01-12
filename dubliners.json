@@ -1,0 +1,285 @@
+{
+    "locations": [
+        {
+            "distance": 0,
+            "nnps": [
+                "Little Chandler",
+                "Gallaher",
+                "Mr. Duffy",
+                "Kearney",
+                "Mr Holohan",
+                "Kathleen",
+                "Teddy",
+                "Ignatius Gallaher"
+            ],
+            "lon": -6.248274,
+            "vbs": [],
+            "location": "Dublin",
+            "lat": 53.34807,
+            "nns": [
+                "river",
+                "city",
+                "face",
+                "nothing",
+                "money",
+                "working-man",
+                "citizen"
+            ]
+        },
+        {
+            "distance": 462.309771468679,
+            "nnps": [
+                "gallaher",
+                "press",
+                "holohan",
+                "gallahers",
+                "modern"
+            ],
+            "lon": -0.127144,
+            "vbs": [],
+            "location": "London",
+            "lat": 51.506325,
+            "nns": []
+        },
+        {
+            "distance": 779.0219405582842,
+            "nnps": [
+                "gallaher"
+            ],
+            "lon": 2.3412,
+            "vbs": [
+                "syop"
+            ],
+            "location": "Paris",
+            "lat": 48.85693,
+            "nns": [
+                "humor",
+                "establishment"
+            ]
+        },
+        {
+            "distance": 186.07915443203274,
+            "nnps": [
+                "ivors"
+            ],
+            "lon": -9.048349,
+            "vbs": [
+                "go",
+                "wanted",
+                "see",
+                "walking",
+                "living"
+            ],
+            "location": "Galway",
+            "lat": 53.273885,
+            "nns": [
+                "love",
+                "girl",
+                "grandmother"
+            ]
+        },
+        {
+            "distance": 0.7293651505583015,
+            "nnps": [],
+            "lon": -6.259074,
+            "vbs": [],
+            "location": "Westmoreland",
+            "lat": 53.34684,
+            "nns": []
+        },
+        {
+            "distance": 9.6656705806668,
+            "nnps": [
+                "dalkey"
+            ],
+            "lon": -6.13448,
+            "vbs": [
+                "knocked",
+                "sustaining",
+                "cross",
+                "belonged"
+            ],
+            "location": "Kingstown",
+            "lat": 53.2938,
+            "nns": [
+                "line",
+                "side",
+                "lady",
+                "train"
+            ]
+        },
+        {
+            "distance": 422.201033100641,
+            "nnps": [
+                "joe",
+                "alphy",
+                "whit-monday"
+            ],
+            "lon": -0.346984,
+            "vbs": [],
+            "location": "Belfast",
+            "lat": 52.059985,
+            "nns": [
+                "purse",
+                "man",
+                "trip",
+                "tea-merchant"
+            ]
+        },
+        {
+            "distance": 445.64285342118734,
+            "nnps": [
+                "segouin",
+                "routh",
+                "englishman",
+                "jimmy"
+            ],
+            "lon": 0.111565,
+            "vbs": [
+                "sent"
+            ],
+            "location": "Cambridge",
+            "lat": 52.20987,
+            "nns": [
+                "life",
+                "term"
+            ]
+        },
+        {
+            "distance": 422.201033100641,
+            "nnps": [],
+            "lon": -0.346984,
+            "vbs": [
+                "spoke",
+                "kept",
+                "had"
+            ],
+            "location": "Glasgow",
+            "lat": 52.059985,
+            "nns": [
+                "daughter",
+                "house"
+            ]
+        },
+        {
+            "distance": 5.87928814237536,
+            "nnps": [],
+            "lon": -6.299539,
+            "vbs": [],
+            "location": "Georges",
+            "lat": 53.391239,
+            "nns": []
+        },
+        {
+            "distance": 8.698909110005475,
+            "nnps": [
+                "gretta",
+                "kate",
+                "gabriel"
+            ],
+            "lon": -6.15399,
+            "vbs": [
+                "nursed",
+                "take"
+            ],
+            "location": "Monkstown",
+            "lat": 53.293701,
+            "nns": [
+                "house",
+                "illness",
+                "cab"
+            ]
+        },
+        {
+            "distance": 12.910983748764014,
+            "nnps": [
+                "hill"
+            ],
+            "lon": -6.06528,
+            "vbs": [
+                "gone"
+            ],
+            "location": "Howth",
+            "lat": 53.387779,
+            "nns": [
+                "mother",
+                "day",
+                "picnic"
+            ]
+        },
+        {
+            "distance": 0.8431077015935066,
+            "nnps": [],
+            "lon": -6.260674,
+            "vbs": [],
+            "location": "Henry",
+            "lat": 53.349735,
+            "nns": []
+        },
+        {
+            "distance": 3.5695533797737413,
+            "nnps": [],
+            "lon": -6.291138,
+            "vbs": [],
+            "location": "Rutland",
+            "lat": 53.328659,
+            "nns": []
+        },
+        {
+            "distance": 16.69832938621908,
+            "nnps": [
+                "malins"
+            ],
+            "lon": -6.175654,
+            "vbs": [
+                "going"
+            ],
+            "location": "Melleray",
+            "lat": 53.204215,
+            "nns": [
+                "penny-piece",
+                "son"
+            ]
+        },
+        {
+            "distance": 0.4189883825740609,
+            "nnps": [],
+            "lon": -6.253824,
+            "vbs": [],
+            "location": "Gardiner",
+            "lat": 53.34987,
+            "nns": []
+        },
+        {
+            "distance": 1.1817344855068035,
+            "nnps": [],
+            "lon": -6.253019,
+            "vbs": [],
+            "location": "Baggot",
+            "lat": 53.33782,
+            "nns": []
+        },
+        {
+            "distance": 1.3194256014205998,
+            "nnps": [],
+            "lon": -6.26773,
+            "vbs": [],
+            "location": "Grattan",
+            "lat": 53.345605,
+            "nns": []
+        },         
+        {
+            "distance": 1.059232931604776,
+            "nnps": [],
+            "lon": -6.260144,
+            "vbs": [],
+            "location": "Grafton",
+            "lat": 53.341695,
+            "nns": []
+        }
+    ],
+    "author": "James Joyce",
+    "id": "dubliners",
+    "title": "Dubliners",
+	"scale": 1
+}

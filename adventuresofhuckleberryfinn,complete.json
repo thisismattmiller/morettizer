@@ -1,0 +1,166 @@
+{
+    "locations": [
+        {
+            "distance": 0,
+            "nnps": [
+                "uncle",
+                "st",
+                "jim",
+                "jacques",
+                "miss"
+            ],
+            "lon": -90.077749,
+            "vbs": [],
+            "location": "New Orleans",
+            "lat": 29.9537,
+            "nns": [
+                "river",
+                "time",
+                "plantation",
+                "nigger",
+                "instinct",
+                "couple",
+                "mile",
+                "luck",
+                "coffin"
+            ]
+        },
+        {
+            "distance": 788.0175275987995,
+            "nnps": [
+                "jim"
+            ],
+            "lon": -89.176269,
+            "vbs": [
+                ""
+            ],
+            "location": "Cairo",
+            "lat": 37.005105,
+            "nns": []
+        },
+        {
+            "distance": 947.9880875944024,
+            "nnps": [
+                "ike"
+            ],
+            "lon": -92.436588,
+            "vbs": [],
+            "location": "Missouri",
+            "lat": 38.258894,
+            "nns": [
+                "shore",
+                "side",
+                "island"
+            ]
+        },
+        {
+            "distance": 1347.8578246205927,
+            "nnps": [],
+            "lon": -85.836954,
+            "vbs": [],
+            "location": "Goshen",
+            "lat": 41.58918,
+            "nns": []
+        },
+        {
+            "distance": 1320.8974388013842,
+            "nnps": [
+                "tom"
+            ],
+            "lon": -82.669468,
+            "vbs": [],
+            "location": "Ohio",
+            "lat": 40.190331,
+            "nns": []
+        },
+        {
+            "distance": 437.54566467826356,
+            "nnps": [],
+            "lon": -86.680737,
+            "vbs": [],
+            "location": "Jacksons",
+            "lat": 32.61436,
+            "nns": []
+        },
+        {
+            "distance": 963.9682085671586,
+            "nnps": [],
+            "lon": -90.199514,
+            "vbs": [],
+            "location": "St. Louis",
+            "lat": 38.62774,
+            "nns": [
+                "son",
+                "captivity"
+            ]
+        },
+        {
+            "distance": 1137.2957404041429,
+            "nnps": [
+                "powell",
+                "susan"
+            ],
+            "lon": -84.504552,
+            "vbs": [],
+            "location": "Cincinnati",
+            "lat": 39.106614,
+            "nns": [
+                "yawl",
+                "boat"
+            ]
+        },
+        {
+            "distance": 1003.8131308383225,
+            "nnps": [
+                "lawyer"
+            ],
+            "lon": -85.766404,
+            "vbs": [],
+            "location": "Louisville",
+            "lat": 38.25486,
+            "nns": [
+                "gentleman",
+                "carpet-bag"
+            ]
+        },
+        {
+            "distance": 1347.7968339390914,
+            "nnps": [
+                "aunt"
+            ],
+            "lon": -84.761896,
+            "vbs": [],
+            "location": "Hicksville",
+            "lat": 41.293553,
+            "nns": []
+        },
+        {
+            "distance": 972.4714974852249,
+            "nnps": [],
+            "lon": -87.267578,
+            "vbs": [],
+            "location": "Pike",
+            "lat": 38.391741,
+            "nns": []
+        },
+        {
+            "distance": 371.19348585897563,
+            "nnps": [
+                "watson",
+                "royal",
+                "jim"
+            ],
+            "lon": -91.268459,
+            "vbs": [
+                "went"
+            ],
+            "location": "Pikesville",
+            "lat": 33.136243,
+            "nns": []
+        }
+    ],
+    "author": "Mark Twain (Samuel Clemens)",
+    "id": "adventuresofhuckleberryfinn,complete",
+    "title": "Adventures of Huckleberry Finn, Complete",
+    "scale": 6
+}

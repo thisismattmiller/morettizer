@@ -1,0 +1,340 @@
+{
+    "locations": [
+        {
+            "distance": 0,
+            "nnps": [
+                "Sherlock Holmes",
+                "staunton",
+                "godfrey",
+                "moriarty",
+                "mcfarlane",
+                "lestrade",
+                "wilson",
+                "overton",
+                "elsie"
+            ],
+            "lon": -0.127144,
+            "vbs": [
+                "trace"
+            ],
+            "location": "London",
+            "lat": 51.506325,
+            "nns": [
+                "crime",
+                "telegram",
+                "train",
+                "shilling",
+                "business",
+                "sensation",
+                "disappearance",
+                "money",
+                "police",
+                "death",
+                "jewel"
+            ]
+        },
+        {
+            "distance": 12.198493876040592,
+            "nnps": [
+                "Jonas Oldacre",
+                "blackheath",
+                "lestrade",
+                "affair"
+            ],
+            "lon": -0.08333,
+            "vbs": [
+                "left",
+                "went",
+                "stayed",
+                "rung",
+                "follows"
+            ],
+            "location": "Norwood",
+            "lat": 51.400002,
+            "nns": [
+                "investigation",
+                "shout",
+                "hotel"
+            ]
+        },
+        {
+            "distance": 149.1803140874937,
+            "nnps": [
+                "riding",
+                "hilton",
+                "thorpe",
+                "cubitt",
+                "slaney",
+                "elriges",
+                "farm",
+                "manor"
+            ],
+            "lon": 0.95091,
+            "vbs": [],
+            "location": "Norfolk",
+            "lat": 52.67403,
+            "nns": [
+                "friend",
+                "squire"
+            ]
+        },
+        {
+            "distance": 79.87950820651167,
+            "nnps": [
+                "godfrey",
+                "trinity",
+                "leslie",
+                "overton",
+                "college"
+            ],
+            "lon": 0.111565,
+            "vbs": [
+                "think"
+            ],
+            "location": "Cambridge",
+            "lat": 52.20987,
+            "nns": []
+        },
+        {
+            "distance": 56.90314026562332,
+            "nnps": [
+                "chiltern",
+                "grange"
+            ],
+            "lon": -0.800824,
+            "vbs": [
+                "went",
+                "reached",
+                "walked",
+                "ride",
+                "gone"
+            ],
+            "location": "Farnham",
+            "lat": 51.214335,
+            "nns": []
+        },
+        {
+            "distance": 6503.473466006138,
+            "nnps": [
+                "smith",
+                "ralph",
+                "police",
+                "woodley",
+                "rhodesian"
+            ],
+            "lon": 19.08332,
+            "vbs": [],
+            "location": "Africa",
+            "lat": -4.666666,
+            "nns": [
+                "uncle",
+                "commission",
+                "pipe",
+                "visit"
+            ]
+        },
+        {
+            "distance": 342.7818965986003,
+            "nnps": [
+                "henri",
+                "eduardo",
+                "lucas",
+                "fournaye"
+            ],
+            "lon": 2.3412,
+            "vbs": [
+                "solve"
+            ],
+            "location": "Paris",
+            "lat": 48.85693,
+            "nns": [
+                "news",
+                "telegram"
+            ]
+        },
+        {
+            "distance": 10.175239398411897,
+            "nnps": [
+                "oldacre",
+                "deep",
+                "dene",
+                "watson",
+                "house"
+            ],
+            "lon": -0.05485,
+            "vbs": [],
+            "location": "Sydenham",
+            "lat": 51.426601,
+            "nns": []
+        },
+        {
+            "distance": 2.2524799841336827,
+            "nnps": [],
+            "lon": -0.111234,
+            "vbs": [],
+            "location": "Kennington",
+            "lat": 51.48864,
+            "nns": []
+        },
+        {
+            "distance": 47.06951643430996,
+            "nnps": [
+                "cross",
+                "old",
+                "charing",
+                "place",
+                "yoxley"
+            ],
+            "lon": 0.52248,
+            "vbs": [],
+            "location": "Chatham",
+            "lat": 51.38193,
+            "nns": [
+                "road",
+                "line",
+                "railway"
+            ]
+        },
+        {
+            "distance": 6.2893072260092735,
+            "nnps": [
+                "appledore",
+                "oxford",
+                "augustus",
+                "milverton"
+            ],
+            "lon": -0.17348,
+            "vbs": [],
+            "location": "Hampstead",
+            "lat": 51.555031,
+            "nns": []
+        },
+        {
+            "distance": 11.678432311735335,
+            "nnps": [],
+            "lon": -0.099184,
+            "vbs": [],
+            "location": "Godolphin",
+            "lat": 51.60997,
+            "nns": []
+        },
+        {
+            "distance": 15857.012640805162,
+            "nnps": [
+                "suez",
+                "adairs",
+                "ronald",
+                "hilda"
+            ],
+            "lon": 136.099915,
+            "vbs": [],
+            "location": "Australia",
+            "lat": -31.934566,
+            "nns": []
+        },
+        {
+            "distance": 7163.760514617874,
+            "nnps": [
+                "slaney",
+				"elsie"
+            ],
+            "lon": -98.58,
+            "vbs": [],
+            "location": "America",
+            "lat": 39.83,
+            "nns": [
+                "letter",
+                "trouble",
+                "starting-point"
+            ]
+        },
+        {
+            "distance": 5.889040563848522,
+            "nnps": [
+                "harding",
+                "morse",
+                "beppo",
+                "hudson"
+            ],
+            "lon": -0.21047,
+            "vbs": [],
+            "location": "Kensington",
+            "lat": 51.495468,
+            "nns": [
+                "marble"
+            ]
+        }, 
+        {
+            "distance": 367.85360580910316,
+            "nnps": [
+                "thorneycroft",
+                "huxtable"
+            ],
+            "lon": -2.049724,
+            "vbs": [],
+            "location": "Mackleton Primary School",
+            "lat": 54.608715,
+            "nns": [
+                "train"
+            ]
+        },
+        {
+            "distance": 157.54541785229804,
+            "nnps": [
+                "Inspector Martin",
+                "hilton",
+                "slaney",
+                "cubitt"
+            ],
+            "lon": 1.2949,
+            "vbs": [],
+            "location": "Norwich",
+            "lat": 52.622495,
+            "nns": [
+                "penalty",
+                "shot",
+                "death"
+            ]
+        },
+        {
+            "distance": 785.472520643562,
+            "nnps": [],
+            "lon": 7.68999,
+            "vbs": [],
+            "location": "Reichenbach",
+            "lat": 46.62455,
+            "nns": []
+        },
+        {
+            "distance": 1781.0899699997008,
+            "nnps": [
+                "watson",
+                "arctic"
+            ],
+            "lon": 17.800665,
+            "vbs": [],
+            "location": "Norway",
+            "lat": 64.574045,
+            "nns": [
+                "warrant",
+                "arrest",
+                "yacht"
+            ]
+        },
+        {
+            "distance": 11.138507792485294,
+            "nnps": [
+                "anerley"
+            ],
+            "lon": 0.02354,
+            "vbs": [],
+            "location": "Blackheath",
+            "lat": 51.471062,
+            "nns": []
+        }
+    ],
+    "author": "Arthur Conan Doyle",
+    "id": "thereturnofsherlockholmes2",
+    "title": "The Return of Sherlock Holmes",
+	"scale": 1
+}

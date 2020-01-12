@@ -1,0 +1,383 @@
+{
+    "locations": [
+        {
+            "distance": 0,
+            "nnps": [
+                "fogg",
+                "phileas",
+                "december",
+                "liverpool",
+                "club",
+                "institution",
+                "reform",
+                "wednesday"
+            ],
+            "lon": -0.127144,
+            "vbs": [],
+            "location": "London",
+            "lat": 51.506325,
+            "nns": [
+                "departure",
+                "quarter",
+                "day",
+                "time",
+                "evening",
+                "warrant"
+            ]
+        },
+        {
+            "distance": 9619.645796478846,
+            "nnps": [
+                "fogg",
+                "fix",
+                "phileas",
+                "carnatic",
+                "passepartout",
+                "tankadere",
+                "aouda"
+            ],
+            "lon": 114.158722,
+            "vbs": [],
+            "location": "Hong Kong",
+            "lat": 22.283319,
+            "nns": [
+                "time",
+                "steamer",
+                "warrant",
+                "voyage",
+                "captain"
+            ]
+        },
+        {
+            "distance": 7186.992213716278,
+            "nnps": [
+                "hill",
+                "fogg",
+                "malabar",
+                "passepartout"
+            ],
+            "lon": 72.875877,
+            "vbs": [],
+            "location": "Bombay",
+            "lat": 19.076191,
+            "nns": [
+                "pagoda",
+                "steamer",
+                "warrant",
+                "interest",
+                "arrest"
+            ]
+        },
+        {
+            "distance": 9573.355936240878,
+            "nnps": [
+                "fogg",
+                "phileas",
+                "carnatic",
+                "november"
+            ],
+            "lon": 139.595123,
+            "vbs": [],
+            "location": "Yokohama",
+            "lat": 35.452702,
+            "nns": [
+                "steamer"
+            ]
+        },
+        {
+            "distance": 8610.942182186964,
+            "nnps": [],
+            "lon": -122.419644,
+            "vbs": [],
+            "location": "San Fransico",
+            "lat": 37.777125,
+            "nns": []
+        },
+        {
+            "distance": 7959.759246929541,
+            "nnps": [
+                "phileas",
+                "english",
+                "fogg"
+            ],
+            "lon": 88.34616,
+            "vbs": [],
+            "location": "Calcutta",
+            "lat": 22.52667,
+            "nns": [
+                "time",
+                "train"
+            ]
+        },
+        {
+            "distance": 5566.757565609701,
+            "nnps": [
+                "fogg"
+            ],
+            "lon": -74.007124,
+            "vbs": [],
+            "location": "New York",
+            "lat": 40.71455,
+            "nns": [
+                "steamer"
+            ]
+        },
+        {
+            "distance": 7112.718148462291,
+            "nnps": [
+                "fogg",
+                "passepartout"
+            ],
+            "lon": -93.189394,
+            "vbs": [],
+            "location": "Omaha",
+            "lat": 36.45106,
+            "nns": [
+                "train",
+                "distance"
+            ]
+        },
+        {
+            "distance": 9189.330973924334,
+            "nnps": [
+                "tankadere",
+                "bunsby"
+            ],
+            "lon": 121.472618,
+            "vbs": [],
+            "location": "Shanghai",
+            "lat": 31.247709,
+            "nns": [
+                "coast",
+                "advantage"
+            ]
+        },
+        {
+            "distance": 10848.417650840622,
+            "nnps": [],
+            "lon": 103.853256,
+            "vbs": [],
+            "location": "Singapore",
+            "lat": 1.29378,
+            "nns": []
+        },
+        {
+            "distance": 342.7818965986003,
+            "nnps": [
+                "thursday",
+                "passepartout",
+                "lyons",
+                "october"
+            ],
+            "lon": 2.3412,
+            "vbs": [],
+            "location": "Paris",
+            "lat": 48.85693,
+            "nns": [
+                "sergeant",
+                "dyop"
+            ]
+        },
+        {
+            "distance": 6043.3080529947665,
+            "nnps": [],
+            "lon": -85.004209,
+            "vbs": [
+                "reached",
+                ""
+            ],
+            "location": "Great Salt Lake",
+            "lat": 43.85734,
+            "nns": [
+                "train"
+            ]
+        },
+        {
+            "distance": 6348.792599779879,
+            "nnps": [
+                "rock",
+                "railway"
+            ],
+            "lon": -87.632409,
+            "vbs": [],
+            "location": "Chicago",
+            "lat": 41.88415,
+            "nns": [
+                "time",
+                "locomotive",
+                "speed"
+            ]
+        },
+        {
+            "distance": 6950.233983111405,
+            "nnps": [],
+            "lon": -94.362194,
+            "vbs": [],
+            "location": "Kearney",
+            "lat": 39.38137,
+            "nns": [
+                "station",
+                "train",
+                "fire"
+            ]
+        },
+        {
+            "distance": 1834.858448770419,
+            "nnps": [
+                "saturday",
+                "suez"
+            ],
+            "lon": 17.94023,
+            "vbs": [],
+            "location": "Brindisi",
+            "lat": 40.634695,
+            "nns": []
+        },
+        {
+            "distance": 6339.472867230054,
+            "nnps": [],
+            "lon": -82.702216,
+            "vbs": [],
+            "location": "Platte",
+            "lat": 37.867621,
+            "nns": []
+        },
+        {
+            "distance": 8492.065353840526,
+            "nnps": [
+                "state"
+            ],
+            "lon": -121.491014,
+            "vbs": [],
+            "location": "Sacramento",
+            "lat": 38.579065,
+            "nns": [
+                "nothing"
+            ]
+        },
+        {
+            "distance": 741.9289050037086,
+            "nnps": [
+                "phileas",
+                "fogg"
+            ],
+            "lon": -0.581039,
+            "vbs": [],
+            "location": "Bordeaux",
+            "lat": 44.836635,
+            "nns": [
+                "captain",
+                "board"
+            ]
+        },
+        {
+            "distance": 8161.368108976356,
+            "nnps": [
+                "jumna",
+                "kiouni"
+            ],
+            "lon": 78.916667,
+            "vbs": [
+                "passed"
+            ],
+            "location": "Ganges River",
+            "lat": 30.983333,
+            "nns": [
+                "valley",
+                "railway"
+            ]
+        },
+        {
+            "distance": 322.92466622748464,
+            "nnps": [],
+            "lon": -3.050718,
+            "vbs": [],
+            "location": "Queenstown",
+            "lat": 53.809102,
+            "nns": [
+                "place",
+                "evening"
+            ]
+        },
+        {
+            "distance": 7910.939201637706,
+            "nnps": [
+                "union",
+                "mormon",
+                "brigham"
+            ],
+            "lon": -111.547321,
+            "vbs": [],
+            "location": "Utah",
+            "lat": 39.499739,
+            "nns": [
+                "territory"
+            ]
+        },
+        {
+            "distance": 9443.447170360245,
+            "nnps": [
+                "fogg"
+            ],
+            "lon": 129.831207,
+            "vbs": [
+                "take"
+            ],
+            "location": "Nagasaki",
+            "lat": 32.768921,
+            "nns": [
+                "steamer"
+            ]
+        },
+        {
+            "distance": 7091.570450479333,
+            "nnps": [
+                "railroad",
+                "lincoln"
+            ],
+            "lon": -99.68095,
+            "vbs": [],
+            "location": "Nebraska",
+            "lat": 41.500755,
+            "nns": [
+                "terminus"
+            ]
+        },
+        
+        {
+            "distance": 5581.650261371975,
+            "nnps": [],
+            "lon": -74.434349,
+            "vbs": [],
+            "location": "Rocky",
+            "lat": 40.90306,
+            "nns": []
+        },
+        {
+            "distance": 7192.442942513164,
+            "nnps": [],
+            "lon": -93.11426,
+            "vbs": [],
+            "location": "Dover",
+            "lat": 35.402704,
+            "nns": [
+                "train"
+            ]
+        },
+        {
+            "distance": 10660.164083681526,
+            "nnps": [],
+            "lon": 102.259708,
+            "vbs": [],
+            "location": "Malacca",
+            "lat": 2.2052,
+            "nns": [
+                "harbor"
+            ]
+        }
+    ],
+    "scale": 60,
+    "author": "Jules Verne",
+    "id": "aroundtheworldin80days",
+    "title": "Around the World in 80 Days"
+}

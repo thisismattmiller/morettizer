@@ -1,0 +1,631 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Moretti-izer</title>
+    <script type="text/javascript" src="d3.v2.js"></script>
+
+    
+    <style>
+		
+	body {
+		font-family:Helvetica, Arial, sans-serif;
+		font-size:8px;
+		
+	}
+	
+	.zeroLoc{
+		fill:#CCC;
+		
+	}
+	
+	.firstLoc{
+		fill:none;
+		stroke:#999;
+		stroke-width: 2px;
+	}
+	.locRect{
+		fill:none;
+		stroke:#999;
+		stroke-width: 1px;		
+	}
+	.locPoint{
+		fill: #C30;
+		
+	}
+	
+	
+	#chart svg{
+		border:solid 1px #CCC;
+	}
+
+	
+	div.tooltip {
+	  position: absolute;
+	  text-align: center;
+	  padding: 8px;
+	  font: 10px sans-serif;
+	  background: #ddd;
+	  border: solid 1px #aaa;
+	  border-radius: 8px;
+	  pointer-events: none;
+	}
+	
+	.cover{
+		height:200px;
+		width:auto;
+		float:left;
+		margin:10px;
+		border:solid 1px #999;
+		position:relative;
+		display: inline-block; 
+
+
+		-moz-transition: all 0.25s ease;
+		-webkit-transition: all 0.25s ease;
+		-o-transition: all 0.25s ease;
+		transition: all 0.25s ease;		
+		
+	}
+	
+	.cover:hover{
+ 		border:solid 1px #C33;
+		-webkit-transform: scale(1.25);
+		-moz-transform: scale(1.25);
+		-o-transform: scale(1.25);
+		transform: scale(1.25);
+ 		z-index:1000; 
+		
+ 
+	 
+		
+	}
+	
+	.header{
+		
+		font-size:14px;
+	}
+	p{
+		font-size: small;
+	}
+	
+	</style>
+    
+    
+  </head>
+  <body>
+  
+  
+  <div style="float:left; width:650px">
+  	<div id="header" class="header"></div>
+    <div id="chart"></div>
+    <div id="key"></div>
+	
+  </div>
+  
+  
+  <div style="float:left; width:650px;">
+  	<div class="header" style="padding-left:10px">moretti-izer: Select a book to diagram.</div>  
+<!--     <?php
+	 
+	foreach (glob("*.json") as $filename) { 
+		?>
+        
+        	<a href="?book=<?=$filename?>"><img src="<? echo str_replace('.json','.jpg',$filename);?>"/></a>
+        
+        <?
+	}
+	 
+	
+	?> -->
+    	<a class="bookit" href="#dubliners.json"><img class="cover" src="dubliners.jpg"/></a>
+    	<a class="bookit" href="#davidcopperfield.json"><img class="cover"  src="davidcopperfield.jpg"/></a>
+    	<a class="bookit" href="#aroundtheworldin80days.json"><img class="cover"  src="aroundtheworldin80days.jpg"/></a>
+    	<a class="bookit" href="#adventuresofhuckleberryfinn,complete.json"><img class="cover"  src="adventuresofhuckleberryfinn,complete.jpg"/></a>
+    	<a  class="bookit" href="#aathereturnofsherlockholmes2.json"><img class="cover"  src="aathereturnofsherlockholmes2.jpg"/></a>
+
+  </div>
+
+    <script type="text/javascript">
+
+
+	var bookit = document.querySelectorAll('.bookit');
+	for (var i = 0; i < bookit.length; i++) {
+	    bookit[i].addEventListener('click', function(event) {
+	        
+	        window.setTimeout(function(){
+	        	window.location.reload(); 
+
+	        },250)
+	    });
+	}
+
+
+
+
+	var w = 600, h = 600;
+	var largeCounter = 9, smallCounter=9;
+	//x = d3.scale.linear().domain([0,360]).range([0, w]),
+	//y = d3.scale.linear().domain([-90,90]).range([0, h]);
+
+	//console.log(x(
+ 
+	
+	var vis = d3.select("#chart").append("svg")
+		.attr("width", w)
+		.attr("height", h);	
+		
+	var scale = 1;	//one pixle = 1KM
+	
+	var file = window.location.hash.replace('#','')
+	if (file == ""){
+		file = "aathereturnofsherlockholmes2.json"
+	}
+
+
+
+	d3.json(file, function(json) {
+		  
+		console.log(json);		
+		document.getElementById('header').innerHTML=json.title + " by " + json.author;
+		
+		
+		scale = json.scale;
+		
+		
+		d3.select("#scaleText").text("1 pixel = " + scale + " km");	
+				
+		var div = d3.select("body").append("div")
+			.attr("class", "tooltip")
+			.style("opacity", 1e-6);	
+		
+ 
+ 		firstLoc = vis.append("g")
+			.attr("x", function(d) { return w/2; })
+			.attr("y", function(d) { return h/2; })
+			.attr("h", 20)
+			.attr("w", 20);				
+
+		//if the scale is normal (1=1) then we have setting to make the firstloc ring look right otherwise the scale will throw it off 
+		if (scale==1){
+			var firstLocDist = (20) + ((json.locations[1].distance*2)/scale);
+			var firstLocDistText = w/2 - ((20 + (json.locations[1].distance*2))/scale) - 20;
+		}else if (scale > 20){
+			//real big scale messes things up too 
+			var firstLocDist = ((json.locations[1].distance*1.5)/scale);
+			var firstLocDistText = w/2 - (((json.locations[1].distance*1.5))/scale) - 30;
+		}else{
+			var firstLocDist = ((json.locations[1].distance)/scale);
+			var firstLocDistText = w/2 - (((json.locations[1].distance))/scale) - 30;			
+		}
+
+		firstLoc.append("circle")
+			.attr("class", "firstLoc")
+			.attr("cx", function(d) { return w/2; })
+			.attr("cy", function(d) { return h/2; })
+			.attr("r", firstLocDist);		
+			
+		var allTerms = [json.locations[1].location].concat(json.locations[1].nnps).concat(json.locations[1].nns).concat(json.locations[1].vbs);		
+		for(i=0;i<=allTerms.length;i++){
+			if (i>3){allTerms[4]='...';}
+			if (i>4){continue;}
+			firstLoc.append("text")
+				.attr("x", function(d) { return  firstLocDistText;})
+				.attr("y", function(d) { return (h/2-10) + (i*10); })
+				.attr("font-weight", (i==0) ? "bold" : "")
+				.style("fill","#666")
+				.text(allTerms[i])
+				.on("mouseover", mouseover)
+				.on("mousemove", function(){  mousemove(["<strong>" + json.locations[1].location + " (" + Math.floor(json.locations[1].distance) + "km):</strong>"].concat(json.locations[1].nnps).concat(json.locations[1].nns).concat(json.locations[1].vbs));})
+				.on("mouseout", mouseout);				
+		}			
+
+
+		//build the first central node/location 
+ 		zeroLoc = vis.append("g")
+			.attr("x", function(d) { return w/2; })
+			.attr("y", function(d) { return h/2; })
+			.attr("h", 20)
+			.attr("w", 20)			
+			.on("mouseover", mouseover)
+			.on("mousemove", function(){  mousemove(["<strong>" + json.locations[0].location + ":</strong>"].concat(json.locations[0].nnps).concat(json.locations[0].nns).concat(json.locations[0].vbs));})
+			.on("mouseout", mouseout);						
+		
+			
+		zeroLoc.append("circle")
+			.attr("class", "zeroLoc")
+			.attr("cx", function(d) { return w/2; })
+			.attr("cy", function(d) { return h/2; })
+			.attr("r", 20);			
+ 			
+
+		//add the zero locaton terms
+		var allTerms = [json.locations[0].location].concat(json.locations[0].nnps).concat(json.locations[0].nns).concat(json.locations[0].vbs);		
+		for(i=0;i<=allTerms.length;i++){
+			if (i>3){allTerms[4]='...';}
+			if (i>4){continue;}
+			zeroLoc.append("text")
+				.attr("x", function(d) { return w/2-10; })
+				.attr("y", function(d) { return (h/2-10) + (i*10); })
+				.attr("font-weight", (i==0) ? "bold" : "") 
+				.attr("pointer-events","none")
+				.text(allTerms[i]);				
+		}
+
+
+
+		//others...
+		for(i=2;i<json.locations.length-2;i++){		
+		
+
+
+			var x, y;
+
+			var realSmall = false;
+			var realBig = false;
+
+
+			//so take the abs number and  subtact and each decimal = 111km 
+			x = Math.abs(Math.abs(json.locations[i].lon)-Math.abs(json.locations[0].lon))*111;
+			console.log(x);
+			//factor in the scale of the map 
+			x = x/scale;
+			console.log(x);			
+			
+			if (json.locations[i].lon < json.locations[0].lon){
+				console.log(json.locations[i].location + " is left of zero node");
+				x = w/2 - x;				
+			}else{
+				console.log(json.locations[i].location + " is right of zero node");
+				x = w/2 + x;
+			}
+			
+			y = Math.abs(Math.abs(json.locations[i].lat)-Math.abs(json.locations[0].lat))*111;
+			y = y/scale;
+			
+			if (json.locations[i].lat < json.locations[0].lat){
+				console.log(json.locations[i].location + " is below zero node");	
+				y = h/2 + y;
+			}else{
+				console.log(json.locations[i].location + " is above zero node");				
+				y = h/2 - y;				
+			}
+
+			
+
+
+			if (x >= w && y >= h){
+			 
+				
+				//rueall furrr away
+				//jitter them along one axis only
+				if (Math.floor(Math.random()*2)==0){
+					x = (w-5);
+					y = (h-100) + 10 * largeCounter;	
+				}else{
+					y = (h-5);
+					x = (w-100) + 10 * largeCounter;						
+				}
+				largeCounter=largeCounter-1;
+				realBig = true;
+				
+			}else if(x <= 0 && y <= 0){
+				
+				
+				if (Math.floor(Math.random()*2)==0){
+					x = (5);
+					y = 10 * smallCounter;	
+				}else{
+					y = 5;
+					x = 10 * smallCounter;						
+				}
+				smallCounter=smallCounter-1;
+				realBig = true;
+				
+				
+			}else{
+			
+				//just one value is way far out/in
+				if (x>w){realBig = true;x=w-5}
+				if (x<0){realBig = true;x=5}				
+				if (y>h){realBig = true;y=h-5}
+				if (y<0){realBig = true;y=5}								
+				
+				
+				
+			}
+
+			if (json.locations[i].distance < json.locations[1].distance){
+				
+				//but not if it really is not too close.... this can happen if the firstLoc is really far away
+				if ((json.locations[i].distance/scale) < 70){
+					
+					if (x<w/2){x=x-(20/scale)}else{x=x+(20/scale)}
+					if (y<h/2){y=y-(20/scale)}else{y=y+(20/scale)}			
+					realSmall=true;
+					
+				}
+			}
+
+			
+			
+			aLoc = vis.append("g")
+			.attr("x", x)
+			.attr("y", y)
+			.attr("id",i)
+			.attr("h", 20)
+			.attr("w", 20)		
+			.on("mouseover", mouseover)
+			.on("mousemove", function(){mousemove(["<strong>" + json.locations[d3.select(this).attr("id")].location + " (" + Math.floor(json.locations[d3.select(this).attr("id")].distance) + "km):</strong>"].concat(json.locations[d3.select(this).attr("id")].nnps).concat(json.locations[d3.select(this).attr("id")].nns).concat(json.locations[d3.select(this).attr("id")].vbs));})
+			.on("mouseout", mouseout);					
+			
+			//function(){  ;})
+			
+			//add dots for the ones real close to the the zero node
+			if (realSmall){
+			
+				aLoc.append("circle")
+					.attr("class", "locPoint")
+					.attr("opacity", 0.5)
+					.attr("cx", x)
+					.attr("cy", y)
+					.attr("r", 3);
+
+			}else if(realBig){
+				
+				aLoc.append("rect")
+					.attr("class", "locRect")
+					.attr("opacity", 0.5)
+					.attr("x", x-5)
+					.attr("y", y-5)
+					.attr("height", 10)
+					.attr("width", 10);				
+				
+				
+				aLoc.append("circle")
+					.attr("class", "locPoint")
+					.attr("opacity", 0.5)
+					.attr("cx", x)
+					.attr("cy", y)
+					.attr("r", 3);				
+				
+				
+			}else{
+			
+				//noramlish i guess
+				var allTerms = [json.locations[i].location].concat(json.locations[i].nnps).concat(json.locations[i].nns).concat(json.locations[i].vbs);		
+				for(n=0;n<=allTerms.length;n++){
+					if (n>3){allTerms[4]='...';}
+					if (n>4){continue;}
+					aLoc.append("text")
+						.attr("x", x)
+						.attr("y", function(){
+						
+							if (y > (h-30)){
+								return y - (n*10)	
+							}else{
+								return y + (n*10)
+							}
+							
+							
+						})
+						.attr("font-weight", (n==0) ? "bold" : "") 
+						.text(allTerms[n]);				
+				}				
+					
+				
+			}
+			/*
+			
+			
+			if (json.locations[i].lat < json.locations[0].lat){
+				console.log(json.locations[i].location + " is left of zero node");	
+			}else{
+				console.log(json.locations[i].location + " is right of zero node");				
+			}
+			if (json.locations[i].lon < json.locations[0].lon){
+				console.log(json.locations[i].location + " is below zero node");	
+			}else{
+				console.log(json.locations[i].location + " is above of zero node");				
+			}			
+			*/
+		
+		}
+		
+	
+		  
+
+
+
+		/*vis.append("circle")
+			.attr("class", "zeroLoc")
+			.attr("cx", function(d) { return w/2; })
+			.attr("cy", function(d) { return h/2; })
+			.attr("r", 20)
+			.append("title").text( json.locations[0].location);
+
+
+		vis.append("circle")
+			.attr("class", "firstLoc")
+			.attr("cx", function(d) { return w/2; })
+			.attr("cy", function(d) { return h/2; })
+			.attr("r", 20 + json.locations[1].distance)
+			.append("title").text(json.locations[1].location);
+		*/
+		
+		
+		
+	
+
+		
+		function mouseover() {
+		  div.transition()
+			  .duration(500)
+			  .style("opacity", 1);
+		}
+		
+		function mousemove(allTerms) {
+			var text = "";
+			for(i=0;i<allTerms.length;i++){			
+				text= text + allTerms[i] + "<br>";
+			}			
+		  div
+			  .html(text)
+			  .style("left", (d3.event.pageX + 50) + "px")
+			  .style("top", (d3.event.pageY - 12) + "px");
+		}
+		
+		function mouseout() {
+		  div.transition()
+			  .duration(500)
+			  .style("opacity", 1e-6);
+		}		
+		
+		
+	});
+	
+	
+	
+	
+	
+		
+	function distance(lat1, lon1, lat2, lon2, unit) {
+		var radlat1 = Math.PI * lat1/180
+		var radlat2 = Math.PI * lat2/180
+		var radlon1 = Math.PI * lon1/180
+		var radlon2 = Math.PI * lon2/180
+		var theta = lon1-lon2
+		var radtheta = Math.PI * theta/180
+		var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+
+		dist = Math.acos(dist)
+		dist = dist * 180/Math.PI
+		dist = dist * 60 * 1.1515
+		if (unit=="K") { dist = dist * 1.609344 }
+		if (unit=="N") { dist = dist * 0.8684 }
+		return dist
+	} 	
+		
+	
+	
+	
+
+
+	var key = d3.select("#key").append("svg")
+		.attr("width", 605)
+		.attr("height", 40);		
+		
+		
+
+
+		key.append("circle")
+			.attr("class", "locPoint")
+			.attr("opacity", 0.5)
+			.attr("cx", 3)
+			.attr("cy", 3)
+			.attr("r", 3);			
+	
+
+		key.append("text")
+			.attr("x", 8)
+			.attr("y", 6)
+			.attr("height", 10)
+			.attr("width", 500) 
+ 			.text(" = Location too close to the center node to display text (hover)");			
+
+
+
+		key.append("rect")
+			.attr("class", "locRect")
+			.attr("opacity", 0.5)
+			.attr("x", 0)
+			.attr("y", 12)
+			.attr("height", 10)
+			.attr("width", 10);			
+	
+		key.append("circle")
+			.attr("class", "locPoint")
+			.attr("opacity", 0.5)
+			.attr("cx", 5)
+			.attr("cy", 17)
+			.attr("r", 3);	
+	
+		key.append("text")
+			.attr("x", 11)
+			.attr("y", 19)
+			.attr("height", 10)
+			.attr("width", 500) 
+ 			.text(" = Location too far away from the center node to display text (hover)");	
+	
+	 
+		key.append("circle")
+			.attr("class", "zeroLoc")
+			.attr("cx", 250)
+			.attr("cy", 14)
+			.attr("r", 14);	    
+    
+    
+		key.append("text")
+			.attr("x", 270)
+			.attr("y", 16)
+			.attr("height", 10)
+			.attr("width", 500) 
+ 			.text(" = The most frequent location");			
+
+
+		key.append("circle")
+			.attr("class", "firstLoc")
+			.attr("cx", 400)
+			.attr("cy", 14)
+			.attr("r", 14);	  	
+
+		key.append("text")
+			.attr("x", 420)
+			.attr("y", 16)
+			.attr("height", 10)
+			.attr("width", 500) 
+ 			.text(" = Second most frequent location");	
+    
+		key.append("text")
+			.attr("x", 530)
+			.attr("y", 8)
+			.attr("id","scaleText")
+			.attr("height", 10)
+			.attr("width", 500) 
+			.style("font-size",11)
+ 			.text("1 pixel = " + scale + " km");		
+	
+	
+    </script>
+    
+  
+   <hr style="clear:both">
+<hr>
+  <div>
+
+  	<p>While reading Franco Moretti’s Graphs, Maps, Trees: Abstract Models For A Literary History I came across his use of geometric (and geographic) radial maps to document the development of a small village. These village story maps lead Moretti to visualize the arrival of industrialization to the village among other events.</p>
+<figure>
+    <img src="blog_1.gif"
+         alt="An example of the radial geographic visualization.">
+</figure>
+    <p>An example of the radial geographic visualization.</p>
+    <p>Moretti’s examples made me wonder if the same mapping technique could be applied to other literature outside the village story genera. To test this idea I built a semi-automated system that uses text extraction to pull out the possible geographic names. Using n-gram frequency the tool then pins frequent words to that location in order to provide some context surround what happened at that location. The system then uses GPS lookup to find and place that location in relation to each other. I say semi-automated because it still is too much noise to select the location and look them up automatically. I made a crude command line input system to present the results allowing for approval of the location, its GPS and the terms associated with it.</p>
+<figure>
+    <img src="blog_2.png"
+         alt="Script">
+</figure>
+<p>The result is a data file that can be read by my d3.js SVG mapping tool that plots the locations in a radial configuration similar to Moretti’s maps. The maps are to scale, although that scale changes (the geographic distance involved in Around the world in 80 days is quite different than The Dubliners). The inner circle is the most mentioned location, which becomes the center of the map. The outer ring represents the second most mentioned location.</p>
+<figure>
+    <img src="blog_3.png"
+         alt="Example">
+</figure>
+
+<p>The results are interesting. I feel they do not work as well as Moretti’s map but by visualizing the story geographically, useful patterns emerge that define the novel. Joyce’s Dubliners graphs to a small group of tightly related points. This makes sense as the novel is about the local neighborhoods and people. As opposed to Verne’s Around the world in 80 days which presents an elongated string of locations spanning thousands of miles.</p>
+  </div>   
+    
+  </body>
+</html>

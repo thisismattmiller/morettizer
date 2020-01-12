@@ -1,0 +1,446 @@
+{
+    "locations": [
+        {
+            "distance": 0,
+            "nnps": [
+                "army",
+                "general",
+                "department",
+                "sherman",
+                "mobile",
+                "halleck",
+                "longstreet",
+                "thomas",
+                "forrest",
+                "ferry",
+                "johnston",
+                "bragg",
+                "burnsides",
+                "command"
+            ],
+            "lon": -85.978745,
+            "vbs": [],
+            "location": "Tennessee",
+            "lat": 35.830734,
+            "nns": [
+                "command",
+                "army",
+                "force",
+                "side",
+                "line",
+                "enemy"
+            ]
+        },
+        {
+            "distance": 299.49791061187017,
+            "nnps": [
+                "general",
+                "army",
+                "sherman",
+                "canby",
+                "division",
+                "thomas",
+                "forrest",
+                "gibson",
+                "mcclernand",
+                "johnston"
+            ],
+            "lon": -89.154327,
+            "vbs": [],
+            "location": "Mississippi",
+            "lat": 36.671259,
+            "nns": [
+                "time",
+                "command",
+                "river"
+            ]
+        },
+        {
+            "distance": 784.5197196579519,
+            "nnps": [
+                "lee",
+                "general",
+                "petersburg",
+                "sheridan",
+                "butler",
+                "army"
+            ],
+            "lon": -77.433654,
+            "vbs": [],
+            "location": "Richmond",
+            "lat": 37.5407,
+            "nns": [
+                "enemy",
+                "army",
+                "time",
+                "cavalry"
+            ]
+        },
+        {
+            "distance": 699.9590272355033,
+            "nnps": [
+                "sherman",
+                "jackson",
+                "pemberton",
+                "black",
+                "johnston",
+                "mcpherson",
+                "grand",
+                "gulf"
+            ],
+            "lon": -85.530419,
+            "vbs": [],
+            "location": "Vicksburg",
+            "lat": 42.11995,
+            "nns": [
+                "enemy",
+                "army",
+                "command",
+                "garrison",
+                "siege",
+                "river"
+            ]
+        },
+        {
+            "distance": 859.7635385028086,
+            "nnps": [
+                "president",
+                "major-general",
+                "secretary",
+                "lincoln"
+            ],
+            "lon": -77.031959,
+            "vbs": [],
+            "location": "Washington",
+            "lat": 38.89037,
+            "nns": [
+                "command"
+            ]
+        },
+        {
+            "distance": 106.14883458616477,
+            "nnps": [
+                "rosecrans",
+                "thomas",
+                "bragg",
+                "a"
+            ],
+            "lon": -85.309464,
+            "vbs": [],
+            "location": "Chattanooga",
+            "lat": 35.04644,
+            "nns": [
+                "battle"
+            ]
+        },
+        {
+            "distance": 81.05981203993963,
+            "nnps": [
+                "buell",
+                "major-general"
+            ],
+            "lon": -86.778365,
+            "vbs": [],
+            "location": "Nashville",
+            "lat": 36.167783,
+            "nns": []
+        },
+        {
+            "distance": 375.96147245329075,
+            "nnps": [
+                "grange",
+                "hurlbut",
+                "smith",
+                "mcclernand",
+                "june"
+            ],
+            "lon": -90.049259,
+            "vbs": [],
+            "location": "Memphis",
+            "lat": 35.149766,
+            "nns": [
+                "cavalry",
+                "railroad",
+                "headquarters"
+            ]
+        },
+        {
+            "distance": 2108.4121799073914,
+            "nnps": [
+                "scott",
+                "mexican",
+                "vera"
+            ],
+            "lon": -102.785282,
+            "vbs": [],
+            "location": "Mexico",
+            "lat": 23.625735,
+            "nns": []
+        },
+        {
+            "distance": 680.0331864929944,
+            "nnps": [
+                "dorn",
+                "may",
+                "halleck"
+            ],
+            "lon": -93.435289,
+            "vbs": [],
+            "location": "Corinth",
+            "lat": 35.073828,
+            "nns": [
+                "advance"
+            ]
+        },
+        {
+            "distance": 564.3849667030147,
+            "nnps": [
+                "senator",
+                "governor"
+            ],
+            "lon": -82.669468,
+            "vbs": [],
+            "location": "Ohio",
+            "lat": 40.190331,
+            "nns": [
+                "father"
+            ]
+        },
+        {
+            "distance": 627.39926316994,
+            "nnps": [
+                "april",
+                "central"
+            ],
+            "lon": -79.458504,
+            "vbs": [],
+            "location": "Virginia",
+            "lat": 38.003351,
+            "nns": [
+                "point",
+                "sword"
+            ]
+        },
+        {
+            "distance": 273.01530646012185,
+            "nnps": [
+                "sherman",
+                "september",
+                "sstop"
+            ],
+            "lon": -84.391109,
+            "vbs": [],
+            "location": "Atlanta",
+            "lat": 33.748315,
+            "nns": [
+                "line"
+            ]
+        },
+        {
+            "distance": 512.394559811892,
+            "nnps": [
+                "sherman",
+                "schofield",
+                "sheridan",
+                "march"
+            ],
+            "lon": -86.527729,
+            "vbs": [],
+            "location": "Carolina",
+            "lat": 31.242498,
+            "nns": []
+        },
+        {
+            "distance": 781.0156390774213,
+            "nnps": [],
+            "lon": -77.403479,
+            "vbs": [],
+            "location": "Petersburg",
+            "lat": 37.228155,
+            "nns": []
+        },
+        {
+            "distance": 613.5463766761939,
+            "nnps": [
+                "march",
+                "buell",
+                "shermans",
+                "december"
+            ],
+            "lon": -81.090719,
+            "vbs": [],
+            "location": "Savannah",
+            "lat": 32.08078,
+            "nns": []
+        },
+        {
+            "distance": 222.80465495303525,
+            "nnps": [
+                "fort"
+            ],
+            "lon": -85.69091,
+            "vbs": [],
+            "location": "Kentucky",
+            "lat": 37.822445,
+            "nns": []
+        },
+        {
+            "distance": 314.2825548548994,
+            "nnps": [
+                "fort",
+                "halleck",
+                "accident"
+            ],
+            "lon": -89.176269,
+            "vbs": [],
+            "location": "Cairo",
+            "lat": 37.005105,
+            "nns": [
+                "headquarters"
+            ]
+        },
+        {
+            "distance": 632.9551435362795,
+            "nnps": [
+                "price",
+                "governor"
+            ],
+            "lon": -92.436588,
+            "vbs": [],
+            "location": "Missouri",
+            "lat": 38.258894,
+            "nns": [
+                "force",
+                "price",
+                "district"
+            ]
+        },
+        {
+            "distance": 660.0775237159135,
+            "nnps": [
+                "lee",
+                "meade"
+            ],
+            "lon": -78.826188,
+            "vbs": [],
+            "location": "Appomattox",
+            "lat": 37.35541,
+            "nns": [
+                "cavalry",
+                "enemy"
+            ]
+        },
+        {
+            "distance": 432.1449414146806,
+            "nnps": [
+                "sherman",
+                "south"
+            ],
+            "lon": -83.22295,
+            "vbs": [],
+            "location": "Georgia",
+            "lat": 32.678275,
+            "nns": []
+        }, 
+        {
+            "distance": 731.4189343687564,
+            "nnps": [
+                "wallace",
+                "creek",
+                "april"
+            ],
+            "lon": -79.997452,
+            "vbs": [],
+            "location": "Pittsburg",
+            "lat": 40.438309,
+            "nns": [
+                "landing"
+            ]
+        },
+        {
+            "distance": 634.38223229469,
+            "nnps": [
+                "hunter"
+            ],
+            "lon": -79.142839,
+            "vbs": [],
+            "location": "Lynchburg",
+            "lat": 37.41402,
+            "nns": [
+                "road"
+            ]
+        },
+        {
+            "distance": 354.9525703083492,
+            "nnps": [
+                "longstreet"
+            ],
+            "lon": -87.785941,
+            "vbs": [],
+            "location": "Knoxville",
+            "lat": 33.005609,
+            "nns": [
+                "relief",
+                "situation"
+            ]
+        },
+        {
+            "distance": 751.8695707764764,
+            "nnps": [
+                "fort",
+                "schofield"
+            ],
+            "lon": -77.945992,
+            "vbs": [],
+            "location": "Wilmington",
+            "lat": 34.23497,
+            "nns": [
+                "enemy"
+            ]
+        },
+        {
+            "distance": 462.0390121437574,
+            "nnps": [
+                "black",
+                "sherman"
+            ],
+            "lon": -90.180434,
+            "vbs": [],
+            "location": "Yazoo Pass",
+            "lat": 33.51711,
+            "nns": [
+                "mouth",
+                "fleet",
+                "river"
+            ]
+        },
+        {
+            "distance": 650.1559583625766,
+            "nnps": [
+                "foster"
+            ],
+            "lon": -79.931604,
+            "vbs": [],
+            "location": "Charleston",
+            "lat": 32.78115,
+            "nns": [
+                "railroad"
+            ]
+        },
+        {
+            "distance": 679.8896692037852,
+            "nnps": [],
+            "lon": -78.987625,
+            "vbs": [],
+            "location": "Shenandoah",
+            "lat": 38.353035,
+            "nns": [
+                "pursuit"
+            ]
+        }
+    ],
+    "scale": 4,
+    "author": "Ulysses S. Grant",
+    "id": "personalmemoirsofu.s.grant,complete",
+    "title": "Personal Memoirs of U. S. Grant, Complete"
+}
